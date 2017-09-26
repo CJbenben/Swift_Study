@@ -172,7 +172,7 @@ print("\(country.name)`s capital city is called \(country.capitalCity.name)")
 class HTMLElement {
     let name: String
     let text: String?
-    lazy var asHTML: (Void) -> String = {
+    lazy var asHTML: () -> String = {
         if let text = self.text {
             return "<\(self.name)>\(text)</\(self.name)>"
         } else {
@@ -225,7 +225,7 @@ paragraph = nil         // 析构函数并没有调用，表示发生了循环�
 class HTMLElement2 {
     let name: String
     let text: String?
-    lazy var asHTML: (Void) -> String = {
+    lazy var asHTML: () -> String = {
         [unowned self] in           //此行为捕获列表，将 self 捕获为无主引用而不是强引用,不会持有 HTMLElement 实例的强引用
         if let text = self.text {
             return "<\(self.name)>\(text)</\(self.name)>"
