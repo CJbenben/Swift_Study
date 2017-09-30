@@ -43,7 +43,7 @@ for (key, value) in dict2 {
 }
 
 for keys in dict2.keys {
-    print("key = \(keys)")
+    print("4.key = \(keys)")
 }
 for values in dict2.values {
     print("value = \(values)")

@@ -58,12 +58,10 @@ func chooseStepFunc(backward: Bool) -> (Int) -> Int {
 var currentValue = 3
 let moveNearerToZero = chooseStepFunc(backward: currentValue > 0)
 while currentValue != 0 {
-    print("\(currentValue)...")
+    print("moveNearerToZero == \(currentValue)...")
     currentValue = moveNearerToZero(currentValue)
 }
 print("zero!")
-
-
 
 /**********************************函数参数标签和参数名称**********************************/
 //1.指定参数标签

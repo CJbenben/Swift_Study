@@ -62,6 +62,17 @@ loadData { (message) in
     print(message)
 }
 
+func someFunction(arg: (_ index: NSInteger, _ indexPath: NSIndexPath) -> Void) {
+    print("function main")
+    let indexPath = NSIndexPath(row: 0, section: 0)
+    arg(1231, indexPath)
+}
+
+someFunction { (index, indexPath) in
+    print("index = \(index), indexPath = \(indexPath)")
+}
+
+
 /**********************************尾随闭包**********************************/
 //尾随闭包是一个书写在函数括号之后的闭包表达式，函数支持将其作为最后一个参数调用。在使用尾随闭包时，可以不用写出它的参数标签。
 func abcd(a: () -> Void) {
@@ -102,6 +113,7 @@ strings
 
 
 
+print("****************值捕获****************")
 /**********************************值捕获**********************************/
 //闭包可以在其被定义的上下文中捕获常量或变量。即使定义这些常量和变量的原作用域不存在了，闭包仍然可以在闭包函数体内引用和修改这些值。swift 中最简单的形式是嵌套函数。
 func makeIncrementer(forIncrement amount: Int) -> () -> Int {
@@ -134,8 +146,15 @@ incrementByTen2()
 
 
 /**********************************逃逸闭包(p136)**********************************/
+var completionHandlers: [() -> Void] = []
 
+func someFunctionWithEscapingClosure(completionHandler: @escaping () -> Void) {
+    completionHandlers.append(completionHandler)
+}
 
+someFunctionWithEscapingClosure {
+    
+}
 
 
 

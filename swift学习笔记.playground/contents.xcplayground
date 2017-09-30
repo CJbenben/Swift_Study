@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <playground version='6.0' target-platform='ios'>
     <pages>
-        <page name='05控制流'/>
-        <page name='04集合类型'/>
-        <page name='06函数'/>
-        <page name='03字符串和字符'/>
         <page name='02基本运算符'/>
+        <page name='03字符串和字符'/>
+        <page name='04集合类型'/>
+        <page name='05控制流'/>
+        <page name='06函数'/>
         <page name='07闭包'/>
         <page name='08枚举'/>
         <page name='09类和结构体'/>
