@@ -8,6 +8,24 @@
 
 import Foundation
 
+/**********************************其他常识**********************************/
+let a = 9 % 4
+print("a = \(a)")
+
+let b = -6
+let alsoB = +b
+print("alsoB = \(alsoB)")
+
+let dog = "dog"
+let cat = "dog"
+if dog == cat {
+    print("dog == cat")
+}
+
+let possible = "123a"
+let converted = Int(possible)
+print("converted = \(converted)")
+
 /**********************************区间运算符**********************************/
 /** 1.闭区间运算符(a...b)定义一个从a到b的所有值的区间。a不能超过b。如可以在for in遍历数组中使用
  *  2.半开区间运算符(a..<b)定义一个从a到b不包括b的区间。
